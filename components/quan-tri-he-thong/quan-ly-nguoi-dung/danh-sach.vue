@@ -154,7 +154,6 @@ export default defineComponent({
     // Function
     // Bật modal thêm user
     const themUser = () => {
-      // alert("Them role");
       themmoiref.value.visible = true;
       themmoiref.value.resetFields();
     };
@@ -168,7 +167,10 @@ export default defineComponent({
     const xemUser = (id) => {
       alert("Xem ");
     };
-
+    const phanQuyenNguoiDung = (id) => {
+      phanquyenref.value.visible = true;
+      phanquyenref.value.wId = id;
+    };
     // Xóa user
     const xoaUser = (id) => {
       $spaFetch(`${$apiUrl.DELETE_USER}?userId=${id}`, {

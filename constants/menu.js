@@ -13,11 +13,6 @@ export default [
       title: 'Quản lý mat hang',
       url: '/quan-tri-he-thong/test',
       name: '/quan-tri-he-thong/test',
-      grandChild: [{
-        title: 'Quản lý hàng tồn',
-        url: '/quan-tri-he-thong/test/quan-ly-hang-ton',
-        name: '/quan-tri-he-thong/test/quan-ly-hang-ton',
-      },]
     },
     {
       title: 'Quản lý người dùng',

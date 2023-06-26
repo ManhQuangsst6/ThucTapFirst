@@ -136,7 +136,6 @@ export default defineComponent({
     });
     const claim = computed(() => authStores.$state.token);
     const checkPermission = (permission) => {
-      console.log(menus);
       if (config.checkPermission) {
         var decodeToken = $decodeToken(claim.value.token);
         if (decodeToken.Permissions && decodeToken.Permissions.length > 0) {

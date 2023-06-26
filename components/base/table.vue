@@ -213,6 +213,7 @@ export default defineComponent({
         Page: 1,
         SortExpression: null,
       });
+      console.log(data);
     };
     const customRow = (record) => {
       return {
