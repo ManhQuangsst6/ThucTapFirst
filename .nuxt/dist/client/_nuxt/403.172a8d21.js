@@ -1,0 +1,1 @@
+/* empty css                *//* empty css              */import{f as n,c,o,_ as e}from"./entry.4bcf074a.js";const _={};function r(s,a){const t=e;return o(),c(t,{status:"403",title:"403","sub-title":"B\u1EA1n kh\xF4ng c\xF3 quy\u1EC1n truy c\u1EADp trang n\xE0y"})}const f=n(_,[["render",r]]);export{f as default};

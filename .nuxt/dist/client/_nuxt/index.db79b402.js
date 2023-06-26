@@ -1,0 +1,1 @@
+import{f as t,g as a,t as o,o as r}from"./entry.4bcf074a.js";const n={};function s(e,c,p,i,f,l){return r(),a("h1",null,"param"+o(e.$route.param.id),1)}const d=t(n,[["render",s]]);export{d as default};

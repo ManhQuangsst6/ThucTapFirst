@@ -1,0 +1,339 @@
+{
+  "assets/images/logo.png": {
+    "file": "_nuxt/logo.02e7056b.png",
+    "src": "assets/images/logo.png"
+  },
+  "assets/images/icons/back.svg": {
+    "file": "_nuxt/back.b3be863d.svg",
+    "src": "assets/images/icons/back.svg"
+  },
+  "assets/images/icons/cog-svgrepo-com.svg": {
+    "file": "_nuxt/cog-svgrepo-com.87c0851c.svg",
+    "src": "assets/images/icons/cog-svgrepo-com.svg"
+  },
+  "assets/images/icons/dot.svg": {
+    "file": "_nuxt/dot.98a8c92b.svg",
+    "src": "assets/images/icons/dot.svg"
+  },
+  "assets/images/icons/exclamation-triangle-svgrepo-com.svg": {
+    "file": "_nuxt/exclamation-triangle-svgrepo-com.c1b07b68.svg",
+    "src": "assets/images/icons/exclamation-triangle-svgrepo-com.svg"
+  },
+  "assets/images/icons/layer-group-svgrepo-com.svg": {
+    "file": "_nuxt/layer-group-svgrepo-com.4ee4ba06.svg",
+    "src": "assets/images/icons/layer-group-svgrepo-com.svg"
+  },
+  "assets/images/icons/map-svgrepo-com.svg": {
+    "file": "_nuxt/map-svgrepo-com.146199d5.svg",
+    "src": "assets/images/icons/map-svgrepo-com.svg"
+  },
+  "assets/images/icons/favicon.ico": {
+    "file": "_nuxt/favicon.4d663e7a.ico",
+    "src": "assets/images/icons/favicon.ico"
+  },
+  "assets/images/icons/megaphone-svgrepo-com.svg": {
+    "file": "_nuxt/megaphone-svgrepo-com.bc17703c.svg",
+    "src": "assets/images/icons/megaphone-svgrepo-com.svg"
+  },
+  "assets/images/icons/search-s-svgrepo-com.svg": {
+    "file": "_nuxt/search-s-svgrepo-com.cf00022f.svg",
+    "src": "assets/images/icons/search-s-svgrepo-com.svg"
+  },
+  "assets/images/icons/more.png": {
+    "file": "_nuxt/more.26c3daa5.png",
+    "src": "assets/images/icons/more.png"
+  },
+  "assets/images/icons/question-circle-svgrepo-com.svg": {
+    "file": "_nuxt/question-circle-svgrepo-com.962edc14.svg",
+    "src": "assets/images/icons/question-circle-svgrepo-com.svg"
+  },
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "_nuxt/entry.4bcf074a.js",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/403.vue",
+      "pages/about.vue",
+      "pages/demo-app.vue",
+      "pages/error.vue",
+      "pages/index.vue",
+      "pages/login/index.vue",
+      "pages/quan-tri-he-thong/quan-ly-nhom-nguoi-dung/index.vue",
+      "pages/quan-tri-he-thong/quan_ly_nguoi_dung/index.vue",
+      "pages/quan-tri-he-thong/test/index.vue",
+      "pages/test/index.vue",
+      "pages/test/testv1/_id/index.vue",
+      "pages/test/testv1/index.vue",
+      "layouts/default.vue",
+      "layouts/login.vue",
+      "virtual:nuxt:D:/Branch_QLLT/src/WebApp/.nuxt/error-component.mjs"
+    ],
+    "css": [
+      "_nuxt/entry.7ed74c97.css"
+    ]
+  },
+  "virtual:nuxt:D:/Branch_QLLT/src/WebApp/.nuxt/error-component.mjs": {
+    "file": "_nuxt/error-component.b015e69e.js",
+    "src": "virtual:nuxt:D:/Branch_QLLT/src/WebApp/.nuxt/error-component.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.c3efcb71.css",
+      "_nuxt/index.94bcd8e0.css"
+    ]
+  },
+  "pages/403.vue": {
+    "file": "_nuxt/403.172a8d21.js",
+    "src": "pages/403.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.c3efcb71.css"
+    ]
+  },
+  "pages/about.vue": {
+    "file": "_nuxt/about.a59563fc.js",
+    "src": "pages/about.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/demo-app.vue": {
+    "file": "_nuxt/demo-app.b8a2e8bc.js",
+    "src": "pages/demo-app.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vue-draggable-next.esm-bundler.84fb2661.js",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/demo-app.d48c79b4.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.94bcd8e0.css"
+    ]
+  },
+  "_vue-draggable-next.esm-bundler.84fb2661.js": {
+    "file": "_nuxt/vue-draggable-next.esm-bundler.84fb2661.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/vue-draggable-next.5e7cc9ef.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.94bcd8e0.css"
+    ]
+  },
+  "pages/error.vue": {
+    "file": "_nuxt/error.72a5c5f1.js",
+    "src": "pages/error.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.c3efcb71.css",
+      "_nuxt/index.94bcd8e0.css"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "_nuxt/index.0602032e.js",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vue-draggable-next.esm-bundler.84fb2661.js",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/index.61186d2e.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.94bcd8e0.css"
+    ]
+  },
+  "pages/login/index.vue": {
+    "file": "_nuxt/index.cc822a3a.js",
+    "src": "pages/login/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/quan-tri-he-thong/quan-ly-nhom-nguoi-dung/index.vue": {
+    "file": "_nuxt/index.427448ec.js",
+    "src": "pages/quan-tri-he-thong/quan-ly-nhom-nguoi-dung/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.6e2c92ab.js",
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_menu.38fc7b90.js"
+    ],
+    "css": [
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.94bcd8e0.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.eb19471e.css"
+    ]
+  },
+  "_index.6e2c92ab.js": {
+    "file": "_nuxt/index.6e2c92ab.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/index.a47aa0dd.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.94bcd8e0.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.eb19471e.css",
+      "_nuxt/index.79defdd3.css"
+    ]
+  },
+  "_menu.38fc7b90.js": {
+    "file": "_nuxt/menu.38fc7b90.js",
+    "css": [
+      "_nuxt/menu.d353b335.css"
+    ]
+  },
+  "pages/quan-tri-he-thong/quan_ly_nguoi_dung/index.vue": {
+    "file": "_nuxt/index.0ef6403a.js",
+    "src": "pages/quan-tri-he-thong/quan_ly_nguoi_dung/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.6e2c92ab.js",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.94bcd8e0.css",
+      "_nuxt/index.04fa619d.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.eb19471e.css"
+    ]
+  },
+  "pages/quan-tri-he-thong/test/index.vue": {
+    "file": "_nuxt/index.7fdcbe94.js",
+    "src": "pages/quan-tri-he-thong/test/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/test/index.vue": {
+    "file": "_nuxt/index.5fec2aad.js",
+    "src": "pages/test/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/test/testv1/_id/index.vue": {
+    "file": "_nuxt/index.db79b402.js",
+    "src": "pages/test/testv1/_id/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/test/testv1/index.vue": {
+    "file": "_nuxt/index.07135a45.js",
+    "src": "pages/test/testv1/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "layouts/default.vue": {
+    "file": "_nuxt/default.0596c3cf.js",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_menu.38fc7b90.js"
+    ],
+    "css": [
+      "_nuxt/default.03531780.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.79defdd3.css",
+      "_nuxt/index.94bcd8e0.css",
+      "_nuxt/index.eb19471e.css",
+      "_nuxt/index.412bb84f.css"
+    ],
+    "assets": [
+      "_nuxt/back.b3be863d.svg",
+      "_nuxt/cog-svgrepo-com.87c0851c.svg",
+      "_nuxt/dot.98a8c92b.svg",
+      "_nuxt/exclamation-triangle-svgrepo-com.c1b07b68.svg",
+      "_nuxt/favicon.4d663e7a.ico",
+      "_nuxt/layer-group-svgrepo-com.4ee4ba06.svg",
+      "_nuxt/map-svgrepo-com.146199d5.svg",
+      "_nuxt/megaphone-svgrepo-com.bc17703c.svg",
+      "_nuxt/more.26c3daa5.png",
+      "_nuxt/question-circle-svgrepo-com.962edc14.svg",
+      "_nuxt/search-s-svgrepo-com.cf00022f.svg",
+      "_nuxt/logo.02e7056b.png"
+    ]
+  },
+  "layouts/login.vue": {
+    "file": "_nuxt/login.17dbdef4.js",
+    "src": "layouts/login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "_nuxt/login.9bdb20c6.css",
+      "_nuxt/default.8227c70a.css",
+      "_nuxt/index.412bb84f.css"
+    ]
+  },
+  "index.css": {
+    "file": "_nuxt/index.04fa619d.css",
+    "src": "index.css"
+  },
+  "menu.css": {
+    "file": "_nuxt/menu.d353b335.css",
+    "src": "menu.css"
+  },
+  "layouts/login.css": {
+    "file": "_nuxt/login.9bdb20c6.css",
+    "src": "layouts/login.css"
+  },
+  "default.css": {
+    "file": "_nuxt/default.8227c70a.css",
+    "src": "default.css"
+  },
+  "pages/demo-app.css": {
+    "file": "_nuxt/demo-app.d48c79b4.css",
+    "src": "pages/demo-app.css"
+  },
+  "vue-draggable-next.css": {
+    "file": "_nuxt/vue-draggable-next.5e7cc9ef.css",
+    "src": "vue-draggable-next.css"
+  },
+  "layouts/default.css": {
+    "file": "_nuxt/default.03531780.css",
+    "src": "layouts/default.css"
+  },
+  "pages/index.css": {
+    "file": "_nuxt/index.61186d2e.css",
+    "src": "pages/index.css"
+  },
+  "node_modules/nuxt/dist/app/entry.css": {
+    "file": "_nuxt/entry.7ed74c97.css",
+    "src": "node_modules/nuxt/dist/app/entry.css"
+  }
+}
