@@ -25,7 +25,6 @@ export default defineComponent({
   },
   setup(props, context) {
     const { value } = toRefs(props);
-    console.log(value);
     const datanames = ref([]);
     const { $spaFetch, $apiUrl } = useNuxtApp();
     $spaFetch(props.API, {

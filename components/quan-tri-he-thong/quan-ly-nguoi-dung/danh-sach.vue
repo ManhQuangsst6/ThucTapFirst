@@ -199,6 +199,8 @@ export default defineComponent({
 
     // reset form search
     const ResetTable = () => {
+      debugger;
+      let a = 1;
       formRef.value.resetFields();
       tableRef.value.handleTableSearch();
     };

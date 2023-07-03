@@ -1,11 +1,16 @@
 <template>
-  <h1>hazzz</h1>
+  <NuxtLayout name="login">
+    <template #header> Some header template content. </template>
+
+    The rest of the page
+  </NuxtLayout>
 </template>
 
 <script>
-export default {
-  layout: "login",
-};
+definePageMeta({
+  layout: false,
+});
+export default {};
 </script>
 
 <style>

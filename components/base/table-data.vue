@@ -1,20 +1,28 @@
 <template>
-  <a-table class="ant-table-striped" :columns="columns" :row-key="(record) => record.Id" :data-source="dataSource"
-    :row-class-name="(_record, index) => (index % 2 === 1 ? 'table-striped' : null)"
+  <a-table
+    class="ant-table-striped"
+    :columns="columns"
+    :row-key="(record) => record.Id"
+    :data-source="dataSource"
+    :row-class-name="
+      (_record, index) => (index % 2 === 1 ? 'table-striped' : null)
+    "
     @change="handleTableChange"
-    :pagination="pagination" :scroll="scrollTable" bordered 
-    :showSorterTooltip="false" 
-    >
+    :pagination="pagination"
+    :scroll="scrollTable"
+    bordered
+    :showSorterTooltip="false"
+  >
     <template v-for="(_, name) in $slots" #[name]="slotData">
       <slot :name="name" v-bind="slotData" />
     </template>
   </a-table>
 </template>
 <script>
-import moment from 'moment';
+import moment from "moment";
 import { usePagination } from "vue-request";
-import { computed, defineComponent,ref } from "vue";
-import { CheckableTag } from 'ant-design-vue';
+import { computed, defineComponent, ref } from "vue";
+import { CheckableTag } from "ant-design-vue";
 export default defineComponent({
   props: {
     title: {
@@ -31,7 +39,7 @@ export default defineComponent({
     },
     advanceSearch: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     selectable: {
       type: Boolean,
@@ -53,11 +61,11 @@ export default defineComponent({
     },
     scroll: {
       type: Object,
-      default: {}
+      default: {},
     },
     pagination: {
-      type:Boolean,
-      default:true
+      type: Boolean,
+      default: true,
     },
     dataSource: {
       type: Array,
@@ -78,23 +86,21 @@ export default defineComponent({
     const totalCurrentPage = ref(10);
 
     const scrollTable = computed(() => {
-        if (props.scroll) {
-            return {
-                ...props.scroll
-            }
-        }
-        return {};
-    })
+      if (props.scroll) {
+        return {
+          ...props.scroll,
+        };
+      }
+      return {};
+    });
 
     if (columns[0].dataIndex !== "STT") {
-      columns.unshift(
-        {
-          title: "STT",
-          dataIndex: "STT",
-          width: "5%",
-          sorter: false
-        },
-      );
+      columns.unshift({
+        title: "STT",
+        dataIndex: "STT",
+        width: "5%",
+        sorter: false,
+      });
     }
     const { $spaFetch } = useNuxtApp();
     const queryData = (params) => {
@@ -112,7 +118,7 @@ export default defineComponent({
           KeyWord: props.keySearch,
         };
       }
-      if(props.advanceSearch) {
+      if (props.advanceSearch) {
         if (Object.keys(props.advanceSearch).length > 0) {
           for (const [key, value] of Object.entries(props.advanceSearch)) {
             if (value) {
@@ -136,24 +142,34 @@ export default defineComponent({
           ...pagingParams,
           SortExpression: params.SortExpression,
         };
-        
-        var field = params.SortExpression.replace(' asc', '').replace(' desc', '');
-        var asc = params.SortExpression.indexOf('desc') < 0;
-        dataSource.value.sort(function(a, b) {
+
+        var field = params.SortExpression.replace(" asc", "").replace(
+          " desc",
+          ""
+        );
+        var asc = params.SortExpression.indexOf("desc") < 0;
+        dataSource.value.sort(function (a, b) {
           let x = a[field].toLowerCase();
           let y = b[field].toLowerCase();
-          if(asc) {
-            if (x < y) {return -1;}
-            if (x > y) {return 1;}
-          }
-          else {
-            if (x > y) {return -1;}
-            if (x < y) {return 1;}
+          if (asc) {
+            if (x < y) {
+              return -1;
+            }
+            if (x > y) {
+              return 1;
+            }
+          } else {
+            if (x > y) {
+              return -1;
+            }
+            if (x < y) {
+              return 1;
+            }
           }
           return 0;
         });
       }
-      return pagingParams
+      return pagingParams;
     };
     const { data, run, loading, current, pageSize, total } = usePagination(
       queryData,
@@ -203,7 +219,8 @@ export default defineComponent({
       visible,
       listChecked,
       onChange,
-      scrollTable,handleTableChange
+      scrollTable,
+      handleTableChange,
     };
   },
 });

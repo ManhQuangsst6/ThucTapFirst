@@ -129,7 +129,7 @@ export default defineComponent({
           }
         }
       }
-      console.log(pagingParams);
+
       //columns.log(props.apiUrl);
       if (params.SortExpression) {
         pagingParams = {
@@ -213,7 +213,6 @@ export default defineComponent({
         Page: 1,
         SortExpression: null,
       });
-      console.log(data);
     };
     const customRow = (record) => {
       return {

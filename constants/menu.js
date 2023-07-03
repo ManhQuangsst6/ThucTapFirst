@@ -18,7 +18,8 @@ export default [
       title: 'Quản lý người dùng',
       url: '/quan-tri-he-thong/quan-ly-nguoi-dung',
       name: '/quan-tri-he-thong/quan-ly-nguoi-dung',
-    }
+    },
+
     ]
     //  permissions: ['TIM_KIEM_BAN_DO'],
   },

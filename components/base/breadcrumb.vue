@@ -62,10 +62,7 @@ export default {
         }
         return breadcrumbArray;
       }, []);
-      console.log(breadcrumbs);
-      let a = breadcrumbs.filter((x) => x.title + "" != "");
-      console.log(a);
-      return a;
+      return breadcrumbs.filter((x) => x.title + "" != "");
     },
   },
   methods: {

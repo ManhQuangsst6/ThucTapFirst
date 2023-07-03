@@ -34,6 +34,13 @@
         <a-form-item :name="['PhoneNumber']" label="PhoneNumber">
           <a-input v-model:value="formState.PhoneNumber" />
         </a-form-item>
+        <a-form-item label="Roles">
+          <common-select-role
+            v-model:value="formStateRoles"
+            :API="$apiUrl.GET_NHOM_NGUOI_DUNG"
+            @changeListRole="changeListRole"
+          />
+        </a-form-item>
       </a-modal>
     </a-form>
   </div>
@@ -66,6 +73,7 @@ export default defineComponent({
         span: 16,
       },
     };
+    const formStateRoles = ref([]);
     const formState = reactive({
       Id: null,
       UserName: null,
@@ -78,7 +86,7 @@ export default defineComponent({
       NormalizedEmail: null,
       NormalizedUserName: null,
       PhoneNumberConfirmed: null,
-      Roles: null,
+      Roles: [],
       TwoFactorEnabled: null,
       SecurityStamp: null,
       PhoneNumber: null,
@@ -95,11 +103,11 @@ export default defineComponent({
     const handleOk = async () => {
       // loading.value = true;
       const values = await formRef.value.validateFields();
-      console.log(values);
       loading.value = true;
+      console.log("aa", formStateRoles.value);
       $spaFetch($apiUrl.CREATE_USER, {
         method: "POST",
-        body: values,
+        body: JSON.stringify({ user: values, Roles: formStateRoles.value }),
       }).then((res) => {
         loading.value = false;
         visible.value = false;
@@ -114,6 +122,15 @@ export default defineComponent({
     const handleCancel = () => {
       visible.value = false;
     };
+    const changeListRole = (list) => {
+      const listObjectRole = list.map((item) => {
+        return {
+          id: item,
+        };
+      });
+      formStateRoles.value = listObjectRole;
+      console.log(listObjectRole);
+    };
     return {
       loading,
       visible,
@@ -125,6 +142,8 @@ export default defineComponent({
       formRef,
       rules,
       onFinish,
+      changeListRole,
+      formStateRoles,
     };
   },
 });

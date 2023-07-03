@@ -33,6 +33,15 @@
         <a-form-item :name="['PhoneNumber']" label="PhoneNumber">
           <a-input v-model:value="formState.PhoneNumber" />
         </a-form-item>
+        <a-form-item label="Roles">
+          <common-select-role
+            :API="$apiUrl.GET_NHOM_NGUOI_DUNG"
+            v-model:value="roles"
+          />
+        </a-form-item>
+        <a-form-item label="test">
+          <common-checkbox-role v-model:value="test" />
+        </a-form-item>
       </a-modal>
     </a-form>
   </div>
@@ -55,6 +64,8 @@ export default defineComponent({
         span: 16,
       },
     };
+    const formStateRoles = ref([]);
+    const test = ref([]);
     const formState = reactive({
       Id: null,
       UserName: null,
@@ -74,7 +85,7 @@ export default defineComponent({
     });
     const loading = ref(false);
     const visible = ref(false);
-
+    const roles = ref([]);
     // Hàm show modal
     const showModal = () => {
       visible.value = true;
@@ -86,27 +97,20 @@ export default defineComponent({
     const handleOk = async () => {
       // loading.value = true;
       const values = await formRef.value.validateFields();
+      console.log("test", test.value);
+      return;
       loading.value = true;
-
       $spaFetch(`${$apiUrl.UPDATE_USER}`, {
         method: "PUT",
-        body: {
-          Id: formState.Id,
-          UserName: formState.UserName,
-          Email: formState.Email,
-          PhoneNumber: formState.PhoneNumber,
-          AccessFailedCount: formState.AccessFailedCount,
-          ConcurrencyStamp: formState.ConcurrencyStamp,
-          EmailConfirmed: formState.EmailConfirmed,
-          LockoutEnabled: formState.LockoutEnabled,
-          LockoutEnd: formState.LockoutEnd,
-          NormalizedEmail: formState.NormalizedEmail,
-          NormalizedUserName: formState.NormalizedUserName,
-          PhoneNumberConfirmed: formState.PhoneNumberConfirmed,
-          Roles: formState.Roles,
-          TwoFactorEnabled: formState.TwoFactorEnabled,
-          SecurityStamp: formState.SecurityStamp,
-        },
+        body: JSON.stringify({
+          user: {
+            id: formState.Id,
+            email: formState.Email,
+            userName: formState.UserName,
+            phoneNumber: formState.PhoneNumber,
+          },
+          roles: roles.value,
+        }),
       })
         .then((res) => {
           loading.value = false;
@@ -128,23 +132,17 @@ export default defineComponent({
           method: "GET",
         })
           .then((res) => {
-            (formState.Id = res.result.id),
-              (formState.UserName = res.result.userName),
-              (formState.Email = res.result.email),
-              (formState.PhoneNumber = res.result.phoneNumber),
-              (formState.AccessFailedCount = res.result.accessFailedCount),
-              (formState.ConcurrencyStamp = res.result.concurrencyStamp),
-              (formState.EmailConfirmed = res.result.emailConfirmed),
-              (formState.LockoutEnabled = res.result.lockoutEnabled),
-              (formState.LockoutEnd = res.result.lockoutEnd),
-              (formState.NormalizedEmail = res.result.normalizedEmail),
-              (formState.NormalizedUserName = res.result.normalizedUserName),
-              (formState.PhoneNumberConfirmed =
-                res.result.phoneNumberConfirmed),
-              (formState.Roles = res.result.roles),
-              (formState.TwoFactorEnabled = res.result.twoFactorEnabled),
-              (formState.SecurityStamp = res.result.securityStamp);
-            console.log(formState.PhoneNumber);
+            (formState.Id = res.result.user.id),
+              (formState.UserName = res.result.user.userName),
+              (formState.Email = res.result.user.email),
+              (formState.PhoneNumber = res.result.user.phoneNumber);
+            formStateRoles.value = [...res.result.roles];
+            test.value = [...res.result.roles];
+            // roles.value = res.result.roles.map((item) => {
+            //   return item.id;
+            // });
+            roles.value = [...res.result.roles];
+            console.log("ss", roles.value);
             loading.value = false;
           })
           .catch(() => {
@@ -152,16 +150,28 @@ export default defineComponent({
           });
       }
     });
+    const changeListRole = (list) => {
+      const listObjectRole = list.map((item) => {
+        return {
+          id: item,
+        };
+      });
+      formStateRoles.value = listObjectRole;
+    };
     return {
       loading,
       visible,
       showModal,
       handleCancel,
       formState,
+      roles,
       layout,
       formRef,
       wId,
       handleOk,
+      formStateRoles,
+      changeListRole,
+      test,
     };
   },
 });
